@@ -1,0 +1,47 @@
+#consolidator {
+  --consolidator-padding: 2px;
+  --consolidator-margin: 2px;
+  --consolidator-border-thickness: 2px;
+  --consolidator-border-radius: 4px;
+  --consolidator-dialog-radius: 8px;
+  border: var(--consolidator-border-thickness) solid black;
+  border-radius: var(--consolidator-dialog-radius);
+  box-shadow: 4px 4px 0 0 dimgray;
+  outline: none;
+  padding: 0 var(--consolidator-padding);
+}
+#consolidator > p {
+  color: black;
+  background: white;
+  padding: 0 var(--consolidator-padding);
+  margin: var(--consolidator-margin) 0;
+  border-radius: var(--consolidator-border-radius);
+}
+#consolidator > p::before {
+  padding: 0 var(--consolidator-padding);
+}
+#consolidator > p[data-type=log]::before {
+  content: "📋";
+}
+/* #consolidator > p[data-type=log] {} */
+#consolidator > p[data-type=error]::before {
+  content: "⛔️";
+}
+#consolidator > p[data-type=error] {
+  color: red;
+  background: pink;
+}
+#consolidator > p[data-type=info]::before {
+  content: "ℹ️";
+}
+#consolidator > p[data-type=info] {
+  color: blue;
+  background: skyblue;
+}
+#consolidator > p[data-type=warn]::before {
+  content: "⚠️";
+}
+#consolidator > p[data-type=warn] {
+  color: firebrick;
+  background: yellow;
+}

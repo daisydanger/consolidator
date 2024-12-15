@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Consolidator/styles.css">
+</head>
+<body>
+<script type="module" defer>
+import { 
+  Consolidator, 
+  ConsolidatorUI 
+}  from './Consolidator/index.js';
+// instantiate Consolidator & ConsolidatorUI
+const consolidator = new Consolidator();
+const consolidatorUI = new ConsolidatorUI(consolidator);
+consolidatorUI.appendToDOM();
+// console statements are captured by Consolidator
+console.log('console log', consolidator, consolidatorUI);
+console.warn('warning');
+console.info('info');
+console.error('error');
+thiawoijs; // uncaught error
+</script>
+</body>
+</html>
