@@ -12,6 +12,5 @@ $ http-server
 
 ## Concepts
 
-- `console`: Instantiating Consolidator replaces the `window.console` with a Proxy that replicates all console functions
-- `consold`: For bypassing the new proxy, the old `console` is pushed to `consold`, a stack of previous consoles. Under normal conditions, the native `console` object will be at `consold[0]`.
-
+- `console`: Creating a Consolidator replaces the `window.console` with a Proxy that observes the native console
+- `consold`: The old `console` is pushed to `consold`, a stack of previous consoles. Under normal conditions, the native `console` object will be at `consold[0]`.
