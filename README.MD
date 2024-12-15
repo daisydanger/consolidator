@@ -7,7 +7,7 @@ Stylish DevTools embedded into your website.
 This package is under development. You can use the npm package `http-server` to run the demo. Just run the following from the project's root directory:
 
 ```bash
-$ http-server src
+$ http-server
 ```
 
 ## Concepts
