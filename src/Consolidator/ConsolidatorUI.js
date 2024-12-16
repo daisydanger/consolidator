@@ -4,6 +4,7 @@ export class ConsolidatorUI {
     this.dialog = document.createElement('dialog');
     this.dialog.setAttribute('id', 'consolidator');
     this.handleLog = this.handleLog.bind(this);
+    this.formatArg = this.formatArg.bind(this);
     consolidator.addEventListener(events.log, this.handleLog);
     consolidator.addEventListener(events.error, this.handleLog);
     consolidator.addEventListener(events.warn, this.handleLog);
@@ -22,9 +23,18 @@ export class ConsolidatorUI {
   }
   handleLog(event) {
     this.append(
-      event.detail.args.join(' '), 
+      event.detail.args.map(this.formatArg).join(' '), 
       event.detail.type
     );
     this.dialog.show();
+  }
+  formatArg(arg) {
+    if ([
+      'string','number','boolean','undefined','function'
+    ].includes(typeof arg)) return arg;
+    return `<details><summary>${arg.constructor.name} {}</summary><ul>${
+      Object.entries(arg).map(
+        ([key, value]) => `<li>${key}: ${this.formatArg(value)}</li>`
+    ).join('')}</ul></details>`;
   }
 }

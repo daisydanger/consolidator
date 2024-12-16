@@ -17,6 +17,7 @@ const consolidator = new Consolidator();
 const consolidatorUI = new ConsolidatorUI(consolidator);
 consolidatorUI.appendToDOM();
 // console statements are captured by Consolidator
+console.log({ 0: 0, 1: 1, 2: true });
 console.log('console log', consolidator, consolidatorUI);
 console.warn('warning');
 console.info('info');

@@ -63,8 +63,10 @@ export class Consolidator extends EventTarget {
     window.onerror = (
       message, source, lineno, colno, error
     ) => {
+      // todo: replicate in Consolidator, 
+      //   but don't suppress original
       console.error('Uncaught', error);
-      return true;
+      // return true;
     }
   }
 }

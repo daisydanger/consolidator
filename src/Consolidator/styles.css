@@ -19,6 +19,7 @@
 }
 #consolidator > p::before {
   padding: 0 var(--consolidator-padding);
+  vertical-align: top;
 }
 #consolidator > p[data-type=log]::before {
   content: "📋";
@@ -44,4 +45,13 @@
 #consolidator > p[data-type=warn] {
   color: firebrick;
   background: yellow;
+}
+#consolidator details {
+  display: inline-block;
+  vertical-align: top;
+}
+#consolidator ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  list-style-type: none;
 }
