@@ -1,0 +1,19 @@
+{
+  "name": "consolidator",
+  "author": "daisy.codes",
+  "version": "0.0.1",
+  "description": "event wrapper and UI for the console",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "dev": "tsc --build --watch & live-server",
+    "build": "tsc --build --clean --watch"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "typescript": "^5.7.2"
+  }
+}

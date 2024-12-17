@@ -1,5 +1,6 @@
 import { events } from './events.js';
 export class ConsolidatorUI {
+  dialog;
   constructor(consolidator) {
     this.dialog = document.createElement('dialog');
     this.dialog.setAttribute('id', 'consolidator');

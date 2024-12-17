@@ -4,10 +4,11 @@ Stylish DevTools embedded into your website.
 
 ## Under Development
 
-This package is under development. You can use the npm package `http-server` to run the demo. Just run the following from the project's root directory:
+This package is under development. To run the demo, open a shell in the root directory of the project and run the following:
 
-```bash
-$ http-server
+```
+$ npm install
+$ npm run dev
 ```
 
 ## Concepts
