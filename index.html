@@ -4,7 +4,7 @@
 <title>Consolidator</title>
 <meta name="description" content="stylish, embedded dev tools">
 <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,interactive-widget=resizes-content">
-<link rel="stylesheet" href="./src/Consolidator/styles.css">
+<link rel="stylesheet" href="./public/styles.css">
 </head>
 <body>
 <script type="module" defer>
@@ -22,6 +22,12 @@ console.log('console log', consolidator, consolidatorUI);
 console.warn('warning');
 console.info('info');
 console.error('error');
+console.trace('hello');
+try {
+  thiawoijs;
+} catch(e) {
+  console.warn('caught error', e);
+}
 thiawoijs; // uncaught error
 </script>
 </body>

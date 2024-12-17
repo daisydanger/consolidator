@@ -22,7 +22,7 @@
   vertical-align: top;
 }
 #consolidator > p[data-type=log]::before {
-  content: "📋";
+  content: "📝";
 }
 /* #consolidator > p[data-type=log] {} */
 #consolidator > p[data-type=error]::before {
@@ -46,6 +46,10 @@
   color: firebrick;
   background: yellow;
 }
+#consolidator > p[data-type=trace]::before {
+  content: "🗂️";
+}
+/* #consolidator > p[data-type=trace] {} */
 #consolidator details {
   display: inline-block;
   vertical-align: top;

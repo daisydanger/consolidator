@@ -9,7 +9,7 @@
     "/dist"
   ],
   "scripts": {
-    "dev": "tsc --build --watch & live-server",
+    "dev": "tsc --build --watch & live-server --watch=./dist,./index.html,./public --quiet",
     "build": "tsc --build --clean --watch"
   },
   "devDependencies": {
