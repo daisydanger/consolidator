@@ -1,4 +1,5 @@
-import { events } from './events.js';
+import { events } from '../Consolidator/events.js';
+
 export class ConsolidatorUI {
   dialog;
   constructor(consolidator) {
@@ -14,13 +15,15 @@ export class ConsolidatorUI {
   }
   appendToDOM(element) {
     const node = element || document.querySelector('body');
-    node.append(this.dialog);
+    node.append(this.dialog)
   }
   append(content, type) {
+    const consolidateLog = document.createElement('consolidate-log');
     const p = document.createElement('p');
     p.setAttribute('data-type', type);
     p.innerHTML = content;
     this.dialog.append(p);
+    this.dialog.append(consolidateLog);
   }
   handleLog(event) {
     this.append(
